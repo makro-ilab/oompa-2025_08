@@ -1,0 +1,48 @@
+
+Locatable:
+  at: Place
+
+Moveable(Locatable)  # dynamic place
+  at: Place | None
+
+Located:  # static place
+  at: Place
+
+Depot(Located):
+  at: Place
+
+Distributor(Located):
+  at: Place
+
+Hoist(Located):
+  at: Place
+  holding: Crate | None
+  lift(crate)
+  drop(crate, surface)
+  load_unsupervised(truck)
+  unload_unsupervised(truck)
+  load_supervised(truck)
+  unload_supervised(truck)
+
+Surface(Locatable):
+  at: Place
+  top: Crate | None
+  height: int
+
+Pallet(Located, Surface):
+  at: Place
+  top: Crate
+  height: int = 0
+
+Truck(Moveable):
+  at: Place | None
+  crate: Crate | None
+  drive(start, end)
+
+Crate(Moveable, Surface):
+  at: Place | None
+  top: Crate | None
+  height: int
+  on: Truck | Hoist | Surface | None
+
+

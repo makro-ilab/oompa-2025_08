@@ -1,0 +1,4 @@
+[submodule "lib/makro-python-utils"]
+	path = lib/makro-python-utils
+	url = ../makro-python-utils-git.git
+	branch = develop
