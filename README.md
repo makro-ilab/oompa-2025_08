@@ -241,7 +241,7 @@ See `KNOWN_ISSUES.md` for detailed lists of bugs, unimplemented features, and TO
 }
 ```
 
-**License:** [License type to be determined and included in final release—see LICENSE file in the repository.]
+**License:** Apache License 2.0 — Copyright 2025 Naval Research Laboratory. See the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
